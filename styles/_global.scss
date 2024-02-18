@@ -467,19 +467,19 @@ input[type="number"] {
     opacity: 0.7;
   }
 }
-.sidelong__btn {
-  @extend .btn;
-  color: $c-sidelong;
-  padding: $app-xxs $app-xs;
-  font-size: $app-font-sm;
-  background-color: transparent;
-  border: 1px solid $c-sidelong;
-  border-radius: $app-sidelong-radius;
+// .sidelong__btn {
+//   @extend .btn;
+//   color: $c-sidelong;
+//   padding: $app-xxs $app-xs;
+//   font-size: $app-font-sm;
+//   background-color: transparent;
+//   border: 1px solid $c-sidelong;
+//   border-radius: $app-sidelong-radius;
 
-  &:disabled {
-    opacity: 0.5;
-  }
-}
+//   &:disabled {
+//     opacity: 0.5;
+//   }
+// }
 .secondary__btn {
   @extend .btn;
   color: $c-white;
