@@ -1,0 +1,803 @@
+@import "./variables";
+
+html {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+span,
+label,
+a,
+button,
+strong,
+p,
+ul,
+li {
+  margin: 0;
+  text-overflow: ellipsis;
+}
+
+* {
+  outline: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+/*
+* override
+*/
+div,
+span,
+p,
+small {
+  word-break: break-word;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.textarea_block {
+  display: contents;
+
+  textarea {
+    background-color: $c-tarea-bg;
+    border: none;
+    border-radius: $app-sidelong-radius;
+    resize: none;
+    width: 100%;
+    margin: $app-md 0 !important;
+    padding: 10px;
+  }
+
+  h4 {
+    font-size: $app-font-md;
+    color: $c-font-primary;
+    line-height: 1.7;
+  }
+}
+
+/***** custom scroll *****/
+::-webkit-scrollbar {
+  width: 10px;
+  direction: rtl;
+  float: right;
+  text-align: right;
+}
+
+::-webkit-scrollbar-track {
+  background: #d0d0d0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #505050;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d6d6d;
+}
+
+.form-check-input {
+  margin: 0 !important;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* display */
+.flex {
+  display: flex;
+}
+
+.inlile-grid {
+  display: inline-grid;
+}
+
+.contents {
+  display: contents;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.flex-row-r {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+/* flex align */
+.jcb {
+  justify-content: space-between;
+}
+.jca {
+  justify-content: space-around;
+}
+.jce {
+  justify-content: space-evenly;
+}
+.jcc {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-i-center {
+  align-items: center;
+}
+
+.c-bg {
+  background-color: $c-bg;
+}
+.c-transparent {
+  background-color: transparent;
+}
+
+/** app padding **/
+.pad-0 {
+  padding: 0 !important;
+}
+// all
+.pad-xs {
+  padding: $app-xs !important;
+}
+.pad-sm {
+  padding: $app-sm !important;
+}
+.pad-md {
+  padding: $app-md !important;
+}
+.pad-lg {
+  padding: $app-lg !important;
+}
+.pad-xl {
+  padding: $app-xl !important;
+}
+.pad-xxl {
+  padding: $app-xxl !important;
+}
+
+// X
+.padX-xxs {
+  padding-right: $app-xxs !important;
+  padding-left: $app-xxs !important;
+}
+.padX-xs {
+  padding-right: $app-xs !important;
+  padding-left: $app-xs !important;
+}
+.padX-sm {
+  padding-right: $app-sm !important;
+  padding-left: $app-sm !important;
+}
+.padX-md {
+  padding-right: $app-md !important;
+  padding-left: $app-md !important;
+}
+.padX-lg {
+  padding-right: $app-lg;
+  padding-left: $app-lg !important;
+}
+.padX-xl {
+  padding-right: $app-xl !important;
+  padding-left: $app-xl !important;
+}
+
+// Y
+.padY-xxs {
+  padding-top: $app-xxs !important;
+  padding-bottom: $app-xxs !important;
+}
+.padY-xs {
+  padding-top: $app-xs !important;
+  padding-bottom: $app-xs !important;
+}
+.padY-sm {
+  padding-top: $app-sm !important;
+  padding-bottom: $app-sm !important;
+}
+.padY-md {
+  padding-top: $app-md !important;
+  padding-bottom: $app-md !important;
+}
+.padY-lg {
+  padding-top: $app-lg !important;
+  padding-bottom: $app-lg !important;
+}
+.padY-xl {
+  padding-top: $app-xl !important;
+  padding-bottom: $app-xl !important;
+}
+.padY-xxl {
+  padding-top: $app-xxl !important;
+  padding-bottom: $app-xxl !important;
+}
+.padY-xxxl {
+  padding-top: $app-xxxl !important;
+  padding-bottom: $app-xxxl !important;
+}
+
+// Left
+.padL-xs {
+  padding-left: $app-xs !important;
+}
+.padL-sm {
+  padding-left: $app-sm !important;
+}
+
+// Bottom
+.padB-md {
+  padding-bottom: $app-md !important;
+}
+.padB-sm {
+  padding-bottom: $app-sm !important;
+}
+.padB-xs {
+  padding-bottom: $app-xs !important;
+}
+
+// Top
+.padT-md {
+  padding-top: $app-md !important;
+}
+.padT-sm {
+  padding-top: $app-sm !important;
+}
+.padT-xs {
+  padding-top: $app-xs !important;
+}
+.padT-xxs {
+  padding-top: $app-xxs !important;
+}
+
+// no padding
+.no-pad {
+  padding: 0 !important;
+}
+.no-padY {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/** app margin **/
+.mar-0 {
+  margin: 0 !important;
+}
+
+.marB-lg {
+  margin-bottom: $app-lg;
+}
+.marB-md {
+  margin-bottom: $app-md;
+}
+.mar-auto {
+  margin: auto;
+}
+
+// Y
+.marY-xs {
+  margin-top: $app-xs;
+  margin-bottom: $app-xs;
+}
+.marY-sm {
+  margin-top: $app-sm;
+  margin-bottom: $app-sm;
+}
+.marY-md {
+  margin-top: $app-md;
+  margin-bottom: $app-md;
+}
+.marY-lg {
+  margin-top: $app-lg;
+  margin-bottom: $app-lg;
+}
+
+// X
+.marX-xs {
+  margin-right: $app-xs;
+  margin-left: $app-xs;
+}
+.marX-sm {
+  margin-right: $app-sm;
+  margin-left: $app-sm;
+}
+.marX-md {
+  margin-right: $app-md;
+  margin-left: $app-md;
+}
+.marX-lg {
+  margin-right: $app-lg;
+  margin-left: $app-lg;
+}
+
+/*
+* app cutom font size classes
+*/
+.app-text-xxs {
+  font-size: $app-font-xxs !important;
+}
+.app-text-xs {
+  font-size: $app-font-xs !important;
+}
+.app-text-sm {
+  font-size: $app-font-sm !important;
+}
+.app-text-md {
+  font-size: $app-font-md !important;
+}
+.app-text-lg {
+  font-size: $app-font-lg !important;
+}
+.app-text-xl {
+  font-size: $app-font-xl !important;
+}
+
+// font style's
+.fw-b {
+  font-weight: bold;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+
+/* app height's */
+.h100 {
+  height: 100%;
+}
+
+/* app width */
+.w100 {
+  width: 100%;
+}
+.w50 {
+  width: 50%;
+}
+
+/**
+ * app content align
+**/
+.align-item-center {
+  align-items: center;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.position-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+// simple-react-lightbox
+#SRLLightbox {
+  direction: ltr !important;
+}
+
+// nprogress
+#nprogress {
+  .bar {
+    background: $c-primary;
+    height: 3px;
+  }
+  .peg {
+    box-shadow: 0 0 10px $c-primary, 0 0 5px $c-primary;
+  }
+  .spinner-icon {
+    border-top-color: $c-primary;
+    border-left-color: $c-primary;
+  }
+}
+
+/** app buttons **/
+.btn {
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+.primary__btn {
+  @extend .btn;
+  background-color: $c-primary;
+  color: $c-white;
+  padding: $app-xxs $app-xs;
+  font-size: $app-font-md;
+  border-radius: $app-sidelong-radius;
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+.sidelong__btn {
+  @extend .btn;
+  color: $c-sidelong;
+  padding: $app-xxs $app-xs;
+  font-size: $app-font-sm;
+  background-color: transparent;
+  border: 1px solid $c-sidelong;
+  border-radius: $app-sidelong-radius;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+.secondary__btn {
+  @extend .btn;
+  color: $c-white;
+  padding: $app-xxs $app-xs;
+  font-size: $app-font-sm;
+  background-color: $c-secondary;
+  border-radius: $app-sidelong-radius;
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+/* app font color */
+.app-font-primary {
+  color: $c-font-primary !important;
+}
+.app-font-secondry {
+  color: $c-font-secondary !important;
+}
+
+// custom input
+.c-input {
+  border: none;
+  border-radius: $app-secondary-radius;
+  background-color: $c-input-bg;
+  padding: $app-xs $app-sm;
+  min-width: 270px;
+  max-width: 100%;
+  font-size: $app-font-sm;
+  min-height: 45px;
+
+  &::placeholder,
+  .css-14el2xx-placeholder {
+    color: $c-input-placeholder;
+    font-size: $app-font-sm;
+    font-weight: 300;
+  }
+}
+
+.white-input {
+  min-width: 270px;
+  max-width: 100%;
+  background: $c-white;
+  border: 1px solid #a8a8a8;
+  border-radius: 5px;
+  font-size: $app-font-sm;
+  padding: $app-sm $app-sm;
+  text-align: center;
+  &::placeholder {
+    color: #828282;
+    opacity: 1;
+    font-weight: 500;
+    font-size: $app-font-sm;
+    line-height: 22px;
+  }
+}
+// error input
+.input_error {
+  border: 1px solid $c-alert !important;
+}
+
+/* validat input */
+._validate {
+  position: relative;
+}
+
+// text input alert
+.input_alert {
+  position: absolute;
+  inset: auto 0 0 auto;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  font-size: $app-font-xs;
+  color: $c-alert;
+  animation: fadeIn 400ms !important;
+}
+
+// title inside the component form
+.form_title {
+  margin-bottom: 40px;
+  text-align: center;
+
+  h4 {
+    font-size: $app-font-lg;
+    font-weight: bold;
+  }
+}
+// title inside the main page
+.main_title {
+  font-size: 22px;
+  line-height: 31px;
+  position: relative;
+  flex: 1;
+  > span {
+    position: absolute;
+    font-size: 34px;
+    line-height: 50px;
+    opacity: 0.05;
+    top: -20px;
+    right: 0px;
+    white-space: nowrap;
+  }
+}
+// border radius
+.border-r-secondary {
+  border-radius: $app-secondary-radius;
+}
+
+// size
+.max-w-400 {
+  max-width: 400px;
+}
+
+// message box
+#message {
+  position: fixed;
+  top: 25;
+  left: 10px;
+  right: 10px;
+  bottom: auto;
+  z-index: 20;
+}
+
+// primary color
+.primary_text {
+  color: $c-primary;
+}
+
+// padding to body when header is exist
+.with_header {
+  padding-top: 60px;
+}
+
+/***** animation *****/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/***** selection *****/
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+// general code
+/** Mobile Version styles **/
+@media all and (max-width: 768px) {
+  .flex-auto-mb {
+    flex: auto;
+  }
+
+  // full with on mobile
+  .w100-mb {
+    width: 100%;
+  }
+
+  // container
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .desktop_only {
+    display: none;
+  }
+
+  .flex-row-mb {
+    flex-direction: row !important;
+  }
+  .flex-row-reverse-mb {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-column-mb {
+    flex-direction: column !important;
+  }
+
+  .jcb-mb {
+    justify-content: space-between;
+  }
+  .jcc-mb {
+    justify-content: center !important;
+  }
+
+  /** app buttons **/
+  .block__btns {
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    button {
+      margin: 5px 0 !important;
+    }
+  }
+
+  /* active link styles */
+  .activeLink {
+    background-color: unset !important;
+
+    svg {
+      fill: $c-primary !important;
+    }
+  }
+
+  // hidden on mb
+  .dis_none_mb {
+    display: none !important;
+  }
+  // show on mb
+  .dis_unset_mb {
+    display: unset !important;
+  }
+
+  // margin
+  .mar-auto-mb {
+    margin: auto;
+  }
+
+  // inputs
+  .input_block {
+    display: grid;
+
+    .c-input {
+      min-width: auto;
+    }
+  }
+
+  // hide on mobile version
+  .hide_mb {
+    display: none !important;
+  }
+}
+
+/** xxs Mobile Version styles **/
+@media all and (max-width: 320px) {
+  .main_title {
+    > span {
+      font-size: 28px;
+    }
+  }
+}
+
+/** xs Mobile Version styles **/
+@media all and (max-width: 550px) {
+  /** app buttons **/
+
+  .question__item_btns {
+    button {
+      width: 100%;
+    }
+  }
+}
+
+/** Desktop Version styles **/
+@media all and (min-width: 769px) {
+  .flex-row-des {
+    flex-direction: row !important;
+  }
+
+  .flex-column-des {
+    flex-direction: column !important;
+  }
+
+  .jcb-des {
+    justify-content: space-between;
+  }
+  .jcc-des {
+    justify-content: center;
+  }
+
+  .flex-auto-des {
+    flex: auto;
+  }
+
+  // title inside the component form
+  .form_title {
+    display: none;
+  }
+
+  .mar-auto-des {
+    margin: auto;
+  }
+
+  // container
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .main_title {
+    font-size: 40px;
+    line-height: 56px;
+    > span {
+      font-size: 72px;
+    }
+  }
+
+  // responsive view
+  .mobile_only {
+    display: none;
+  }
+}
