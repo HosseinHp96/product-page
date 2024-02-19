@@ -11,7 +11,10 @@ const DATA = [
 export default function Home() {
   return (
     <main>
-      <Comps.Slider data={DATA} />
+      {/* <Comps.Slider data={DATA} /> */}
+      <div style={{ background: "red", width: 50, height: 50 }}></div>
+
+      <Comps.Details />
     </main>
   );
 }
