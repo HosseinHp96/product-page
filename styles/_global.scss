@@ -305,6 +305,12 @@ input[type="number"] {
 .marB-md {
   margin-bottom: $app-md;
 }
+.marB-sm {
+  margin-bottom: $app-sm;
+}
+.marB-xs {
+  margin-bottom: $app-xs;
+}
 .mar-auto {
   margin: auto;
 }
@@ -446,6 +452,15 @@ input[type="number"] {
   }
 }
 
+/** divider **/
+.divider {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid;
+  border-top-color: #e8e8e1;
+  width: 100%;
+}
+
 /** app buttons **/
 .btn {
   border: none;
@@ -495,8 +510,10 @@ input[type="number"] {
 .container {
   max-width: 1300px;
   margin: auto;
-  padding-right: 100px;
-  padding-left: 100px;
+  // padding-right: 100px;
+  // padding-left: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* app font color */
@@ -657,10 +674,10 @@ input[type="number"] {
   }
 
   // container
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  // .container {
+  //   padding-left: 20px;
+  //   padding-right: 20px;
+  // }
 
   .desktop_only {
     display: none;
