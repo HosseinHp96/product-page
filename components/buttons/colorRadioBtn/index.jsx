@@ -6,8 +6,12 @@ const ColorRadioBtn = (props) => {
   return (
     <div className={styles["radio-btn-container"]}>
       <label>
-        <input type="radio" name={name} value={value} />
-        <span className={styles["swatch"]}></span>
+        <input type="radio" value={value} />
+
+        <span
+          style={{ backgroundColor: value }}
+          className={styles["swatch"]}
+        ></span>
       </label>
     </div>
   );
