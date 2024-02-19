@@ -1,0 +1,28 @@
+@import "../../styles/_variables.scss";
+
+.radio-container {
+  margin: 10px;
+
+  input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+
+  label {
+    display: inline-block;
+    background-color: $c-white;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    box-shadow: 0 0 0 1px #979797;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  label:hover,
+  input[type="radio"]:focus + label {
+    background-color: $c-primary-black;
+    color: $c-white;
+  }
+}
