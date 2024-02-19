@@ -14,7 +14,7 @@ export default function Home() {
       {/* <Comps.Slider data={DATA} /> */}
       <div style={{ background: "red", width: 50, height: 50 }}></div>
 
-      <Comps.Details />
+      <Comps.ProductDetail />
     </main>
   );
 }

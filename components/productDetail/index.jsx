@@ -1,7 +1,7 @@
 import Color from "./color";
 import Size from "./size";
 
-const Details = () => {
+const ProductDetail = () => {
   return (
     <section>
       <div className="container flex flex-column">
@@ -23,4 +23,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default ProductDetail;
