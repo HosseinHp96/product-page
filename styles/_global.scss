@@ -472,11 +472,17 @@ input[type="number"] {
 }
 .primary__btn {
   @extend .btn;
-  background-color: $c-primary;
+  background-color: $c-primary-black;
   color: $c-white;
-  padding: $app-xxs $app-xs;
-  font-size: $app-font-md;
+  padding: $app-sm $app-xs;
+  font-size: $app-font-sm;
   border-radius: $app-sidelong-radius;
+  font-weight: bold;
+
+  &:hover {
+    background: $c-secondary-black;
+    transition-delay: 0.25s;
+  }
 
   &:disabled {
     opacity: 0.7;

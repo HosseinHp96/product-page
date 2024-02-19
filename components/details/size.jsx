@@ -4,7 +4,7 @@ const sizes = ["XS", "S", "M", "L", "XL", "XXL", "XXXL"];
 
 const Size = () => {
   return (
-    <div className="flex flex-column align-i-center">
+    <div className="flex flex-column align-i-center marB-xs">
       <h5 className="marB-xs">SIZE</h5>
 
       <form className="flex jcc">

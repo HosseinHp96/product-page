@@ -11,7 +11,7 @@ const colors = [
 
 const Color = () => {
   return (
-    <div className="flex flex-column align-i-center">
+    <div className="flex flex-column align-i-center marB-lg">
       <h5 className="marB-xs">COLOR</h5>
 
       <ul className="flex">

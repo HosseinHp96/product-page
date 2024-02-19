@@ -16,6 +16,8 @@ const Details = () => {
         <Size />
 
         <Color />
+
+        <button className="btn primary__btn marY-lg">ADD TO BAG</button>
       </div>
     </section>
   );
