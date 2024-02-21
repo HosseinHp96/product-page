@@ -1,32 +1,43 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./index.scss";
-const StarRating = ({ rate, color, size }) => {
+"use client";
+
+import { useState } from "react";
+import styles from "./index.module.scss";
+
+const StarRating = ({ rate, starSize }) => {
+  const [rating, setRating] = useState(rate);
+  const [hover, setHover] = useState(null);
+
   return (
-    <>
-      <i data-star={rate} style={{ fontSize: size }}></i>
+    <div className={styles.starRating}>
+      {[...Array(5)].map((star, index) => {
+        const currentRating = index + 1;
 
-      <style>
-        {`
-                [data-star]::after {
-                 color : ${color}
-                }
-               `}
-      </style>
-    </>
+        return (
+          <label key={index}>
+            <input
+              key={star}
+              type="radio"
+              name="rating"
+              value={currentRating}
+              onChange={() => setRating(currentRating)}
+            />
+            <span
+              className={styles.star}
+              style={{
+                color:
+                  currentRating <= (hover || rating) ? "#ffc107" : "#e4e5e9",
+                fontSize: starSize,
+              }}
+              onMouseEnter={() => setHover(rate || currentRating)}
+              onMouseLeave={() => setHover(rate || null)}
+            >
+              &#9733;
+            </span>
+          </label>
+        );
+      })}
+    </div>
   );
-};
-
-StarRating.prototype = {
-  rate: PropTypes.number,
-  color: PropTypes.string,
-  width: PropTypes.number,
-};
-
-StarRating.defaultProps = {
-  rate: 0,
-  color: "#ffc635",
-  size: "18px",
 };
 
 export default StarRating;
