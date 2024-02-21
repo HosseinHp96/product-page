@@ -1,7 +1,6 @@
 .slider-container {
   max-width: 1300px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .slider-wrap {
@@ -36,8 +35,7 @@
 .slider-btn {
   all: unset;
   font-weight: bold;
-  font-size: 60px;
-
+  font-size: 3rem;
   display: block;
   position: absolute;
   top: 0;
