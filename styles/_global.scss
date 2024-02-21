@@ -58,23 +58,19 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.textarea_block {
-  display: contents;
-
-  textarea {
-    background-color: $c-tarea-bg;
-    border: none;
-    border-radius: $app-sidelong-radius;
-    resize: none;
-    width: 100%;
-    margin: $app-md 0 !important;
-    padding: 10px;
-  }
-
-  h4 {
-    font-size: $app-font-md;
-    color: $c-font-primary;
-    line-height: 1.7;
+// custom textarea
+.c-textarea {
+  background-color: $c-tarea-bg;
+  border: none;
+  border-radius: $app-sidelong-radius;
+  resize: none;
+  width: 100%;
+  margin: $app-md 0 !important;
+  padding: 10px;
+  &::placeholder {
+    color: $c-input-placeholder;
+    font-size: $app-font-sm;
+    font-weight: 300;
   }
 }
 
@@ -503,11 +499,18 @@ input[type="number"] {
 // }
 .secondary__btn {
   @extend .btn;
-  color: $c-white;
+  color: #000;
   padding: $app-xxs $app-xs;
   font-size: $app-font-sm;
-  background-color: $c-secondary;
+  background-color: unset;
   border-radius: $app-sidelong-radius;
+  border: 1px solid #000;
+
+  &:hover {
+    background: $c-secondary-black;
+    color: $c-white;
+    transition-delay: 0.25s;
+  }
 
   &:disabled {
     opacity: 0.7;
@@ -540,6 +543,7 @@ input[type="number"] {
   max-width: 100%;
   font-size: $app-font-sm;
   min-height: 45px;
+  width: 100%;
 
   &::placeholder,
   .css-14el2xx-placeholder {
