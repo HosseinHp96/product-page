@@ -1,20 +1,47 @@
 "use client";
-import { useState } from "react";
 
-import Stage from "./stage";
+import { useState } from "react";
+import Image from "next/image";
+import styles from "./index.module.scss";
 import NavBtns from "./navBtns";
 
 const Slider = ({ data }) => {
-  const [currentImg, setCurrentImg] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const showNextImg = () => {
+    setImageIndex((index) => {
+      if (index === data.length - 1) return 0;
+      return index + 1;
+    });
+  };
+
+  const showPrevImg = () => {
+    setImageIndex((index) => {
+      if (index === 0) return data.length - 1;
+      return index - 1;
+    });
+  };
 
   return (
-    <div>
-      <Stage data={data} currentImg={currentImg} />
-      <NavBtns
-        data={data}
-        currentImg={currentImg}
-        setCurrentImg={setCurrentImg}
-      />
+    <div className={styles["slider-container"]}>
+      <div className={styles["slider-wrap"]}>
+        <div className={styles["slider-main"]}>
+          {data.map((url, key) => (
+            <div key={key} className={styles["slider-img-wrap"]}>
+              <Image
+                className={styles["slider-img"]}
+                width={500}
+                height={500}
+                alt={`slider image ${key}`}
+                src={url}
+                style={{ translate: `${-100 * imageIndex}%` }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <NavBtns showPrevImg={showPrevImg} showNextImg={showNextImg} />
+      </div>
     </div>
   );
 };

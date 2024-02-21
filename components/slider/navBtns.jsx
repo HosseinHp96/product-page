@@ -1,30 +1,24 @@
 import styles from "./index.module.scss";
 
 const NavBtns = (props) => {
-  const { data, setCurrentImg, currentImg } = props;
+  const { showNextImg, showPrevImg } = props;
 
   return (
-    <div className={styles["nav-container"]}>
+    <>
       <button
-        disabled={currentImg === 0}
-        onClick={() => setCurrentImg((prev) => prev - 1)}
-        className={`${styles["nav-button"]} ${
-          currentImg === 0 && "opacity-50"
-        }`}
-      >
-        {"<"}
-      </button>
-
-      <button
-        disabled={currentImg === data.length - 1}
-        onClick={() => setCurrentImg((prev) => prev + 1)}
-        className={`${styles["nav-button"]} ${
-          currentImg === data.length - 1 && "opacity-50"
-        }`}
+        className={`${styles["slider-btn"]} ${styles["slider-btn-right"]}`}
+        onClick={showNextImg}
       >
         {">"}
       </button>
-    </div>
+
+      <button
+        onClick={showPrevImg}
+        className={`${styles["slider-btn"]} ${styles["slider-btn-left"]}`}
+      >
+        {"<"}
+      </button>
+    </>
   );
 };
 
