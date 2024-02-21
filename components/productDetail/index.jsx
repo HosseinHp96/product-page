@@ -5,13 +5,13 @@ const ProductDetail = () => {
   return (
     <section>
       <div className="container flex flex-column">
-        <h1 className="app-text-lg align-center marB-xs">
+        <h1 className="app-text-xl align-center marB-xs">
           By Anthropologie Tweed Appliqué Blazer
         </h1>
 
-        <div className="app-text-md align-center fw-b">£27.99</div>
+        <div className="app-text-lg align-center fw-b marB-xs">£27.99</div>
 
-        <hr className="divider" />
+        <hr className="divider marB-xs" />
 
         <Size />
 

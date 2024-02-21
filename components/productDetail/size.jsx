@@ -7,7 +7,7 @@ const Size = () => {
     <div className="flex flex-column align-i-center marB-xs">
       <h5 className="marB-xs">SIZE</h5>
 
-      <form className="flex jcc">
+      <form className="flex flex-wrap jcc">
         {sizes.map((size, id) => (
           <TextRadioBtn name={size} key={id} />
         ))}

@@ -15,7 +15,7 @@ const Color = () => {
       <h5 className="marB-xs">COLOR</h5>
 
       <ul className="flex">
-        <form className="flex jcc">
+        <form style={{ gap: "10px 15px" }} className="flex flex-wrap jcc">
           {colors.map((color, id) => (
             <ColorRadioBtn value={color} key={id} />
           ))}
