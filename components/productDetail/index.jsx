@@ -10,11 +10,11 @@ const ProductDetail = () => {
       <div
         className={`container flex flex-column grid-item ${styles["pd-container"]}`}
       >
-        <h1 className="app-text-xl align-center marB-xs">
+        <h1 className="app-text-xxl align-center marB-xs">
           By Anthropologie Tweed Appliqué Blazer
         </h1>
 
-        <div className="app-text-lg align-center fw-b marB-xs">£27.99</div>
+        <div className="app-text-xl align-center fw-b marB-xs">£27.99</div>
 
         <hr className="divider marB-xs" />
 
