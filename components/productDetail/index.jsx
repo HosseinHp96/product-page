@@ -18,7 +18,7 @@ const ProductDetail = () => {
 
         <hr className="divider marB-xs" />
 
-        <div className="marB-xs">
+        <div className="marB-xs align-center">
           <StarRating rate={5} starSize={"1.5rem"} />
         </div>
 

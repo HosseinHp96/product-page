@@ -11,7 +11,7 @@ const Review = () => {
               Hossein Hosseinpour
             </div>
 
-            <StarRating rate={3} />
+            <StarRating rate={3} starSize={"1.5rem"} />
           </div>
           <div className={styles["review-date"]}>12/02/2023</div>
         </div>

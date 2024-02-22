@@ -8,8 +8,8 @@ const ProductReviews = () => {
       <div>
         <div className="scontainer w100 flex flex-column align-i-center">
           <div className="marY-sm align-center">
-            <h1>PRODUCT REVIEWS</h1>
-            <StarRating rate={5} />
+            <h2 className="app-text-xl">PRODUCT REVIEWS</h2>
+            <StarRating rate={5} starSize={'1.5rem'} />
           </div>
         </div>
 

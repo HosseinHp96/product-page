@@ -5,15 +5,9 @@ const Reviews = () => {
   return (
     <div className={`container w100 ${styles["container"]}`}>
       <div className={styles["wrapper"]}>
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
+        {[...Array(9)].map((reviwe, key) => (
+          <Review key={key} />
+        ))}
       </div>
     </div>
   );
