@@ -1,6 +1,7 @@
 import Color from "./color";
 import Size from "./size";
 import styles from "./index.module.scss";
+import Description from "./description";
 
 const ProductDetail = () => {
   return (
@@ -21,6 +22,8 @@ const ProductDetail = () => {
         <Color />
 
         <button className="btn primary__btn marY-lg">ADD TO BAG</button>
+
+        <Description />
       </div>
     </section>
   );
