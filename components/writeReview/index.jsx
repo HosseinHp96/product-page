@@ -16,7 +16,7 @@ const WriteReview = ({ rate, starSize }) => {
           onClick={() => setIsOpen(!isOpen)}
           className="btn secondary__btn marY-lg"
         >
-          WRITE A REVIEW
+          {isOpen ? "CANSEL" : "WRITE A"} REVIEW
         </button>
 
         <Drawer isOpen={isOpen} contentRef={contentRef}>
@@ -31,11 +31,19 @@ const WriteReview = ({ rate, starSize }) => {
               rows="10"
               placeholder="Write your commnet here"
             ></textarea>
+
             <input
               placeholder="Write your name"
               type="text"
               className="c-input"
             />
+
+            <button
+              className="btn primary__btn marY-lg"
+              style={{ padding: "10px 25px" }}
+            >
+              SUBMIT REVIEW
+            </button>
           </div>
         </Drawer>
       </div>
