@@ -15,8 +15,7 @@ export default function Home() {
         <Comps.Slider data={DATA} />
         <Comps.ProductDetail />
       </div>
-      <Comps.WriteReview />
-      <Comps.Reviews />
+      <Comps.ProductReviews />
     </main>
   );
 }

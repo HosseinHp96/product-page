@@ -1,13 +1,20 @@
-import StarRating from "../starRating";
+import StarRating from "../../starRating";
 import styles from "./index.module.scss";
 
 const Review = () => {
   return (
     <div className={styles["review-container"]}>
       <div className={styles["review-wrap"]}>
-        <div className={styles["review-author-name"]}>Hossein Hosseinpour</div>
+        <div className="flex jcb">
+          <div>
+            <div className={styles["review-author-name"]}>
+              Hossein Hosseinpour
+            </div>
 
-        <StarRating rate={3} />
+            <StarRating rate={3} />
+          </div>
+          <div className={styles["review-date"]}>12/02/2023</div>
+        </div>
 
         <p className={styles["review-text"]}>
           First of all, you start off by hiding the actual circular radio

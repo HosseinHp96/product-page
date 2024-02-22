@@ -24,8 +24,7 @@ const StarRating = ({ rate, starSize }) => {
             <span
               className={styles.star}
               style={{
-                color:
-                  currentRating <= (hover || rating) ? "#ffc107" : "#e4e5e9",
+                color: currentRating <= (hover || rating) ? "#000" : "#e4e5e9",
                 fontSize: starSize,
               }}
               onMouseEnter={() => setHover(rate || currentRating)}
