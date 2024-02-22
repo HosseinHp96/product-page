@@ -1,0 +1,11 @@
+@import "../../styles/mixins";
+
+.pd-container {
+  @include mq("md") {
+    > h1,
+    div {
+      text-align: left;
+      align-items: start;
+    }
+  }
+}

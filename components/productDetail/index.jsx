@@ -1,10 +1,13 @@
 import Color from "./color";
 import Size from "./size";
+import styles from "./index.module.scss";
 
 const ProductDetail = () => {
   return (
     <section>
-      <div className="container flex flex-column">
+      <div
+        className={`container flex flex-column grid-item ${styles["pd-container"]}`}
+      >
         <h1 className="app-text-xl align-center marB-xs">
           By Anthropologie Tweed Appliqué Blazer
         </h1>

@@ -3,16 +3,18 @@ import Image from "next/image";
 import * as Comps from "@/components";
 
 const DATA = [
-  "https://picsum.photos/seed/random101/500/500",
-  "https://picsum.photos/seed/random102/500/500",
-  "https://picsum.photos/seed/random103/500/500",
+  "https://eu.mingalondon.com/cdn/shop/products/minga-london-faye-striped-knit-cardigan-11_900x.jpg?v=1649078981",
+  "https://eu.mingalondon.com/cdn/shop/products/minga-london-faye-striped-knit-cardigan-15_720x.jpg?v=1649078981",
+  "https://eu.mingalondon.com/cdn/shop/products/minga-london-faye-striped-knit-cardigan-6_900x.jpg?v=1649078981",
 ];
 
 export default function Home() {
   return (
-    <main>
-      <Comps.Slider data={DATA} />
-      <Comps.ProductDetail />
+    <main className="padY-xxxl">
+      <div className="grid">
+        <Comps.Slider data={DATA} />
+        <Comps.ProductDetail />
+      </div>
       <Comps.WriteReview />
       <Comps.Reviews />
     </main>

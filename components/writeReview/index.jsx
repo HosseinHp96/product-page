@@ -11,7 +11,7 @@ const WriteReview = ({ rate, starSize }) => {
 
   return (
     <section>
-      <div className="container flex flex-column">
+      <div className="container flex flex-column w100">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="btn secondary__btn marY-lg"

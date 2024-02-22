@@ -23,7 +23,7 @@ const Slider = ({ data }) => {
   };
 
   return (
-    <div className={`${styles["slider-container"]} marB-lg `}>
+    <div className={`${styles["slider-container"]} marB-lg grid-item`}>
       <div className={styles["slider-wrap"]}>
         <div className={styles["slider-main"]}>
           {data.map((url, key) => (
