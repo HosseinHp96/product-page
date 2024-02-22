@@ -2,6 +2,7 @@ import Color from "./color";
 import Size from "./size";
 import styles from "./index.module.scss";
 import Description from "./description";
+import StarRating from "../starRating";
 
 const ProductDetail = () => {
   return (
@@ -16,6 +17,10 @@ const ProductDetail = () => {
         <div className="app-text-lg align-center fw-b marB-xs">£27.99</div>
 
         <hr className="divider marB-xs" />
+
+        <div className="marB-xs">
+          <StarRating rate={5} starSize={"1.5rem"} />
+        </div>
 
         <Size />
 

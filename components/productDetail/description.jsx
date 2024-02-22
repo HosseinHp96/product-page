@@ -8,7 +8,7 @@ const Description = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div style={{ cursor: "pointer" }}>
       <h4 onClick={() => setIsOpen(!isOpen)} className="flex jcb">
         <div>DESCRIPTION</div>
 
