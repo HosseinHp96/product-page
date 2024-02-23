@@ -19,6 +19,7 @@ const StarRating = ({ initialRate, constantRate, starSize }) => {
               type="radio"
               name="rating"
               value={currentRating}
+              defaultChecked={initialRate && initialRate === index + 1}
               onChange={() => setRating(currentRating)}
             />
             <span
