@@ -1,19 +1,29 @@
 "use client";
 
+import { useEffect } from "react";
 import Color from "./color";
 import Size from "./size";
 import styles from "./index.module.scss";
 import Description from "./description";
 import StarRating from "../starRating";
+import { useAppContext } from "@/context/state";
 
 const ProductDetail = ({ data }) => {
-  const test = (formData) => {
-    console.log("fire");
+  const { shoppingBag, setshoppingBag } = useAppContext();
 
-    for (var pair of formData.entries()) {
-      console.log(pair[0] + ", " + pair[1]);
-    }
+  const addTOBag = (formData) => {
+    const product = {
+      color: formData.get("color"),
+      size: formData.get("size"),
+      product: data.name,
+    };
+
+    setshoppingBag((val) => [...val, product]);
   };
+
+  useEffect(() => {
+    console.log(shoppingBag);
+  }, [shoppingBag]);
 
   return (
     <section>
@@ -32,12 +42,12 @@ const ProductDetail = ({ data }) => {
           <StarRating constantRate={data.rating} starSize={"1.5rem"} />
         </div>
 
-        <form action={test}>
+        <form action={addTOBag}>
           <Size data={data.sizes} />
 
           <Color data={data.colors} />
 
-          <button type="submit" className="btn primary__btn marY-lg">
+          <button type="submit" className="btn primary__btn marY-lg w100">
             ADD TO BAG
           </button>
         </form>
