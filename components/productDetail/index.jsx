@@ -19,7 +19,7 @@ const ProductDetail = ({ data }) => {
         <hr className="divider marB-xs" />
 
         <div className="marB-xs align-center">
-          <StarRating rate={data.rating} starSize={"1.5rem"} />
+          <StarRating constantRate={data.rating} starSize={"1.5rem"} />
         </div>
 
         <Size data={data.sizes} />

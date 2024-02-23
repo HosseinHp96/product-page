@@ -4,8 +4,9 @@ import { useState, useRef } from "react";
 import styles from "./index.module.scss";
 import StarRating from "../../starRating";
 import { Drawer } from "../..";
+import { createReview } from "@/libs/action";
 
-const WriteReview = ({ rate, starSize }) => {
+const WriteReview = () => {
   const contentRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,31 +20,38 @@ const WriteReview = ({ rate, starSize }) => {
       </button>
 
       <Drawer isOpen={isOpen} contentRef={contentRef}>
-        <div className={styles["write-review-content"]}>
-          <StarRating />
+        <form action={createReview}>
+          <div className={styles["write-review-content"]}>
+            <StarRating initialRate={5} />
 
-          <textarea
-            className="c-textarea"
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Write your commnet here"
-          ></textarea>
+            <textarea
+              className="c-textarea"
+              name="comment"
+              cols="30"
+              rows="10"
+              placeholder="Write your commnet here"
+              required
+              minLength={3}
+            ></textarea>
 
-          <input
-            placeholder="Write your name"
-            type="text"
-            className="c-input"
-          />
+            <input
+              name="review-author"
+              placeholder="Write your name"
+              type="text"
+              className="c-input"
+              required
+              minLength={3}
+            />
 
-          <button
-            className="btn primary__btn marY-lg"
-            style={{ padding: "10px 25px" }}
-          >
-            SUBMIT REVIEW
-          </button>
-        </div>
+            <button
+              type="submit"
+              className="btn primary__btn marY-lg"
+              style={{ padding: "10px 25px" }}
+            >
+              SUBMIT REVIEW
+            </button>
+          </div>
+        </form>
       </Drawer>
     </div>
   );

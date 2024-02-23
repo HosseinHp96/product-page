@@ -9,7 +9,7 @@ const ProductReviews = ({ data }) => {
         <div className="scontainer w100 flex flex-column align-i-center">
           <div className="marY-sm align-center">
             <h2 className="app-text-xl">PRODUCT REVIEWS</h2>
-            <StarRating rate={data.rating} starSize={"1.5rem"} />
+            <StarRating constantRate={data.rating} starSize={"1.5rem"} />
           </div>
         </div>
 

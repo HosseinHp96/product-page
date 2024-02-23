@@ -3,8 +3,8 @@
 import { useState } from "react";
 import styles from "./index.module.scss";
 
-const StarRating = ({ rate, starSize }) => {
-  const [rating, setRating] = useState(rate);
+const StarRating = ({ initialRate, constantRate, starSize }) => {
+  const [rating, setRating] = useState(constantRate || initialRate);
   const [hover, setHover] = useState(null);
 
   return (
@@ -27,8 +27,8 @@ const StarRating = ({ rate, starSize }) => {
                 color: currentRating <= (hover || rating) ? "#000" : "#e4e5e9",
                 fontSize: starSize,
               }}
-              onMouseEnter={() => setHover(rate || currentRating)}
-              onMouseLeave={() => setHover(rate || null)}
+              onMouseEnter={() => setHover(constantRate || currentRating)}
+              onMouseLeave={() => setHover(constantRate || null)}
             >
               &#9733;
             </span>

@@ -9,7 +9,7 @@ const Review = ({ data }) => {
           <div>
             <div className={styles["review-author-name"]}>{data.author}</div>
 
-            <StarRating rate={data.rating} starSize={"1.5rem"} />
+            <StarRating constantRate={data.rating} starSize={"1.5rem"} />
           </div>
           <div className={styles["review-date"]}>{data.date}</div>
         </div>
