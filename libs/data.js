@@ -8,24 +8,26 @@ export async function fetchProductById(id) {
     // Query the database directly and get the data
     return {
       images: [
-        "https://eu.mingalondon.com/cdn/shop/products/minga-london-faye-striped-knit-cardigan-11_900x.jpg?v=1649078981",
-        "https://eu.mingalondon.com/cdn/shop/products/minga-london-faye-striped-knit-cardigan-15_720x.jpg?v=1649078981",
-        "https://eu.mingalondon.com/cdn/shop/products/minga-london-faye-striped-knit-cardigan-6_900x.jpg?v=1649078981",
+        "https://eu.mingalondon.com/cdn/shop/files/HanaWhiteAsymmetricalCutOutTop6_720x.png?v=1684503312",
+        "https://eu.mingalondon.com/cdn/shop/files/HanaWhiteAsymmetricalCutOutTop8_720x.jpg?v=1684503312",
+        "https://eu.mingalondon.com/cdn/shop/files/HanaWhiteAsymmetricalCutOutTop4_720x.jpg?v=1684503312",
+        "https://eu.mingalondon.com/cdn/shop/files/Hana-White-Asymmetrical-Cut-Out-Top11_720x.jpg?v=1684503312",
+        "https://eu.mingalondon.com/cdn/shop/files/Hana-White-Asymmetrical-Cut-Out-Top10_720x.jpg?v=1684503312",
       ],
-      name: "By Anthropologie Tweed Appliqué Blazer",
-      price: "£27.99",
+      name: "HANA WHITE ASYMMETRICAL CUT OUT TOP",
+      price: "€40.00",
       sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
-      colors: [
-        "#e0190b",
-        "#262222",
-        "#271b96",
-        "#5f118c",
-        "#2e6362",
-        "#3a0e5e",
-      ],
+      colors: ["#ffffff", "#262222", "#271b96", "#5f118c", "#2e6362"],
       rating: 4,
-      description:
-        "Relaxed knitted cardigan Stripes in brown and green Distressed rib detail V-neck Front button through opening Loose fit Long sleeves 70% acrylic, 30% wool Relaxed knitted cardigan Stripes in brown and green Distressed rib detail V-neck Front button through opening Loose fit Long sleeves 70% acrylic, 30% wool Relaxed knitted cardigan Stripes in brown and green Distressed rib detail V-neck Front button through opening Loose fit Long sleeves 70% acrylic, 30% wool Relaxed knitted cardigan Stripes in brown and green Distressed rib detail V-neck Front button through opening Loose fit Long sleeves 70% acrylic, 30% wool",
+      description: [
+        "Asymmetrical long sleeve top in white",
+        "Cut out front detail",
+        "Lettuce edge trims",
+        "Boat neckline",
+        "Regular length",
+        "Slim fit",
+        "95% polyester, 5% elastane",
+      ],
     };
   } catch (error) {
     console.error("Database Error:", error);
@@ -43,39 +45,39 @@ export async function fetReviewsById(id) {
       rating: 4,
       reviews: [
         {
-          author: "Hossein Hosseinpour",
-          rating: 4,
-          date: "12/02/2023",
-          comment:
-            "First of all, you start off by hiding the actual circular radio buttons themselves – we’ll just be styling the labels. We can select them by using input. Initially I was hiding this by setting display:none, but as Patryk Kiedrowski points out in the comments, that will mean they are unfocusable and unable to be navigated via the keyboard. So instead, we make it invisible with the following settings:",
-        },
-        {
-          author: "Ali",
+          author: "MARTA",
           rating: 5,
-          date: "01/08/2023",
+          date: "08/28/2023",
           comment:
-            "First of all, you start off by hiding the actual circular radio buttons themselves – we’ll just be styling the labels. We can select them by using input. Initially I was hiding this by setting display:none, but as Patryk Kiedrowski points out in the comments, that will mean they are unfocusable and unable to be navigated via the keyboard. So instead, we make it invisible with the following settings:",
+            "It fits very nicely, it can be worn as it is or as a layer piece! I love wearing it as it is as it's see through but not totally revealing!",
         },
         {
-          author: "Behnam",
-          rating: 2,
-          date: "05/08/2023",
-          comment:
-            "First of all, you start off by hiding the actual circular radio buttons themselves – we’ll just be styling the labels. We can select them by using input. Initially I was hiding this by setting display:none, but as Patryk Kiedrowski points out in the comments, that will mean they are unfocusable and unable to be navigated via the keyboard. So instead, we make it invisible with the following settings:",
-        },
-        {
-          author: "Barbod",
-          rating: 1,
-          date: "12/02/2023",
-          comment:
-            "First of all, you start off by hiding the actual circular radio buttons themselves – we’ll just be styling the labels. We can select them by using input. Initially I was hiding this by setting display:none, but as Patryk Kiedrowski points out in the comments, that will mean they are unfocusable and unable to be navigated via the keyboard. So instead, we make it invisible with the following settings:",
-        },
-        {
-          author: "Arshia",
+          author: "ZOE",
           rating: 4,
-          date: "12/02/2023",
+          date: "05/03/2023",
           comment:
-            "First of all, you start off by hiding the actual circular radio buttons themselves – we’ll just be styling the labels. We can select them by using input. Initially I was hiding this by setting display:none, but as Patryk Kiedrowski points out in the comments, that will mean they are unfocusable and unable to be navigated via the keyboard. So instead, we make it invisible with the following settings:",
+            "Feels slightly uncomfortable because of the scratchy material. However, it's stretchy and fits well and the look was so cute.",
+        },
+        {
+          author: "MARTA",
+          rating: 5,
+          date: "08/28/2023",
+          comment:
+            "It fits very nicely, it can be worn as it is or as a layer piece! I love wearing it as it is as it's see through but not totally revealing!",
+        },
+        {
+          author: "ZOE",
+          rating: 4,
+          date: "05/03/2023",
+          comment:
+            "Feels slightly uncomfortable because of the scratchy material. However, it's stretchy and fits well and the look was so cute.",
+        },
+        {
+          author: "MARTA",
+          rating: 5,
+          date: "08/28/2023",
+          comment:
+            "It fits very nicely, it can be worn as it is or as a layer piece! I love wearing it as it is as it's see through but not totally revealing!",
         },
       ],
     };

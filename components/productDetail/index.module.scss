@@ -9,3 +9,12 @@
     }
   }
 }
+
+.description-container {
+  font-size: 14px;
+  > li {
+    margin-left: 0.5rem;
+    margin-bottom: 0.4rem;
+    list-style-type: square;
+  }
+}
