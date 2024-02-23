@@ -4,31 +4,31 @@ import styles from "./index.module.scss";
 import Description from "./description";
 import StarRating from "../starRating";
 
-const ProductDetail = () => {
+const ProductDetail = ({ data }) => {
   return (
     <section>
       <div
         className={`container flex flex-column grid-item ${styles["pd-container"]}`}
       >
-        <h1 className="app-text-xxl align-center marB-xs">
-          By Anthropologie Tweed Appliqué Blazer
-        </h1>
+        <h1 className="app-text-xxl align-center marB-xs">{data.name}</h1>
 
-        <div className="app-text-xl align-center fw-b marB-xs">£27.99</div>
+        <div className="app-text-xl align-center fw-b marB-xs">
+          {data.price}
+        </div>
 
         <hr className="divider marB-xs" />
 
         <div className="marB-xs align-center">
-          <StarRating rate={5} starSize={"1.5rem"} />
+          <StarRating rate={data.rating} starSize={"1.5rem"} />
         </div>
 
-        <Size />
+        <Size data={data.sizes} />
 
-        <Color />
+        <Color data={data.colors} />
 
         <button className="btn primary__btn marY-lg">ADD TO BAG</button>
 
-        <Description />
+        <Description data={data.description} />
       </div>
     </section>
   );

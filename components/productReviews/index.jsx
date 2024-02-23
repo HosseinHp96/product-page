@@ -2,20 +2,20 @@ import Reviews from "./reviews";
 import WriteReview from "./writeReview";
 import StarRating from "../starRating";
 
-const ProductReviews = () => {
+const ProductReviews = ({ data }) => {
   return (
     <section>
       <div>
         <div className="scontainer w100 flex flex-column align-i-center">
           <div className="marY-sm align-center">
             <h2 className="app-text-xl">PRODUCT REVIEWS</h2>
-            <StarRating rate={5} starSize={'1.5rem'} />
+            <StarRating rate={data.rating} starSize={"1.5rem"} />
           </div>
         </div>
 
         <WriteReview />
 
-        <Reviews />
+        <Reviews data={data.reviews} />
       </div>
     </section>
   );

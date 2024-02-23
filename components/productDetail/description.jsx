@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { Drawer } from "..";
 
-const Description = () => {
+const Description = ({ data }) => {
   const contentRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,17 +15,7 @@ const Description = () => {
         <div>{isOpen ? "-" : "+"}</div>
       </h4>
       <Drawer isOpen={isOpen} contentRef={contentRef}>
-        <div>
-          Relaxed knitted cardigan Stripes in brown and green Distressed rib
-          detail V-neck Front button through opening Loose fit Long sleeves 70%
-          acrylic, 30% wool Relaxed knitted cardigan Stripes in brown and green
-          Distressed rib detail V-neck Front button through opening Loose fit
-          Long sleeves 70% acrylic, 30% wool Relaxed knitted cardigan Stripes in
-          brown and green Distressed rib detail V-neck Front button through
-          opening Loose fit Long sleeves 70% acrylic, 30% wool Relaxed knitted
-          cardigan Stripes in brown and green Distressed rib detail V-neck Front
-          button through opening Loose fit Long sleeves 70% acrylic, 30% wool
-        </div>
+        <div>{data}</div>
       </Drawer>
     </div>
   );
