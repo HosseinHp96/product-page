@@ -1,2 +1,498 @@
-@import "./variables";
-@import "./global";
+@use "./mixins";
+@use "./variables" as var;
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+span,
+label,
+a,
+button,
+strong,
+p,
+ul,
+li {
+  margin: 0;
+  text-overflow: ellipsis;
+}
+
+* {
+  outline: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+/*
+* override
+*/
+div,
+span,
+p,
+small {
+  word-break: break-word;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// custom textarea
+.c-textarea {
+  background-color: var.$c-tarea-bg;
+  border: none;
+  border-radius: var.$app-sidelong-radius;
+  resize: none;
+  width: 100%;
+  margin: var.$app-md 0 !important;
+  padding: 10px;
+  &::placeholder {
+    color: var.$c-input-placeholder;
+    font-size: var.$app-font-sm;
+    font-weight: 300;
+  }
+}
+
+.form-check-input {
+  margin: 0 !important;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* display */
+.flex {
+  display: flex;
+}
+
+.inlile-grid {
+  display: inline-grid;
+}
+
+.contents {
+  display: contents;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.flex-row-r {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+/* flex align */
+.jcb {
+  justify-content: space-between;
+}
+.jca {
+  justify-content: space-around;
+}
+.jce {
+  justify-content: space-evenly;
+}
+.jcc {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-i-center {
+  align-items: center;
+}
+
+// X
+.padX-xxs {
+  padding-right: var.$app-xxs !important;
+  padding-left: var.$app-xxs !important;
+}
+.padX-xs {
+  padding-right: var.$app-xs !important;
+  padding-left: var.$app-xs !important;
+}
+.padX-sm {
+  padding-right: var.$app-sm !important;
+  padding-left: var.$app-sm !important;
+}
+.padX-md {
+  padding-right: var.$app-md !important;
+  padding-left: var.$app-md !important;
+}
+.padX-lg {
+  padding-right: var.$app-lg;
+  padding-left: var.$app-lg !important;
+}
+.padX-xl {
+  padding-right: var.$app-xl !important;
+  padding-left: var.$app-xl !important;
+}
+
+// Y
+.padY-xxs {
+  padding-top: var.$app-xxs !important;
+  padding-bottom: var.$app-xxs !important;
+}
+.padY-xs {
+  padding-top: var.$app-xs !important;
+  padding-bottom: var.$app-xs !important;
+}
+.padY-sm {
+  padding-top: var.$app-sm !important;
+  padding-bottom: var.$app-sm !important;
+}
+.padY-md {
+  padding-top: var.$app-md !important;
+  padding-bottom: var.$app-md !important;
+}
+.padY-lg {
+  padding-top: var.$app-lg !important;
+  padding-bottom: var.$app-lg !important;
+}
+.padY-xl {
+  padding-top: var.$app-xl !important;
+  padding-bottom: var.$app-xl !important;
+}
+.padY-xxl {
+  padding-top: var.$app-xxl !important;
+  padding-bottom: var.$app-xxl !important;
+}
+.padY-xxxl {
+  padding-top: var.$app-xxxl !important;
+  padding-bottom: var.$app-xxxl !important;
+}
+
+// Left
+.padL-xs {
+  padding-left: var.$app-xs !important;
+}
+.padL-sm {
+  padding-left: var.$app-sm !important;
+}
+
+// Bottom
+.padB-md {
+  padding-bottom: var.$app-md !important;
+}
+.padB-sm {
+  padding-bottom: var.$app-sm !important;
+}
+.padB-xs {
+  padding-bottom: var.$app-xs !important;
+}
+
+// Top
+.padT-md {
+  padding-top: var.$app-md !important;
+}
+.padT-sm {
+  padding-top: var.$app-sm !important;
+}
+.padT-xs {
+  padding-top: var.$app-xs !important;
+}
+.padT-xxs {
+  padding-top: var.$app-xxs !important;
+}
+
+// no padding
+.no-pad {
+  padding: 0 !important;
+}
+.no-padY {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/** app margin **/
+.mar-0 {
+  margin: 0 !important;
+}
+
+.marB-lg {
+  margin-bottom: var.$app-lg;
+}
+.marB-md {
+  margin-bottom: var.$app-md;
+}
+.marB-sm {
+  margin-bottom: var.$app-sm;
+}
+.marB-xs {
+  margin-bottom: var.$app-xs;
+}
+.mar-auto {
+  margin: auto;
+}
+
+// Y
+.marY-xs {
+  margin-top: var.$app-xs;
+  margin-bottom: var.$app-xs;
+}
+.marY-sm {
+  margin-top: var.$app-sm;
+  margin-bottom: var.$app-sm;
+}
+.marY-md {
+  margin-top: var.$app-md;
+  margin-bottom: var.$app-md;
+}
+.marY-lg {
+  margin-top: var.$app-lg;
+  margin-bottom: var.$app-lg;
+}
+
+// X
+.marX-xs {
+  margin-right: var.$app-xs;
+  margin-left: var.$app-xs;
+}
+.marX-sm {
+  margin-right: var.$app-sm;
+  margin-left: var.$app-sm;
+}
+.marX-md {
+  margin-right: var.$app-md;
+  margin-left: var.$app-md;
+}
+.marX-lg {
+  margin-right: var.$app-lg;
+  margin-left: var.$app-lg;
+}
+
+/*
+* app cutom font size classes
+*/
+.app-text-xxs {
+  font-size: var.$app-font-xxs !important;
+}
+.app-text-xs {
+  font-size: var.$app-font-xs !important;
+}
+.app-text-sm {
+  font-size: var.$app-font-sm !important;
+}
+.app-text-md {
+  font-size: var.$app-font-md !important;
+}
+.app-text-lg {
+  font-size: var.$app-font-lg !important;
+}
+.app-text-xl {
+  font-size: var.$app-font-xl !important;
+}
+
+// font style's
+.fw-b {
+  font-weight: bold;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+
+/* app height's */
+.h100 {
+  height: 100%;
+}
+
+/* app width */
+.w100 {
+  width: 100%;
+}
+.w50 {
+  width: 50%;
+}
+
+/**
+ * app content align
+**/
+.align-item-center {
+  align-items: center;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.position-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/** divider **/
+.divider {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid;
+  border-top-color: #e8e8e1;
+  width: 100%;
+}
+
+/** app buttons **/
+.btn {
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+.primary__btn {
+  @extend .btn;
+  background-color: var.$c-primary-black;
+  color: var.$c-white;
+  padding: var.$app-sm var.$app-xs;
+  font-size: var.$app-font-sm;
+  border-radius: var.$app-sidelong-radius;
+  font-weight: bold;
+
+  &:hover {
+    background: var.$c-secondary-black;
+
+    @include mixins.prefix(
+      (
+        transition-delay: 0.25s,
+      )
+    );
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
+.secondary__btn {
+  @extend .btn;
+  color: #000;
+  padding: var.$app-xxs var.$app-xs;
+  font-size: var.$app-font-sm;
+  background-color: unset;
+  border-radius: var.$app-sidelong-radius;
+  border: 1px solid #000;
+
+  &:hover {
+    background: var.$c-primary-black;
+    color: var.$c-white;
+
+    @include mixins.prefix(
+      (
+        transition-delay: 0.25s,
+      )
+    );
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mixins.mq("md") {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+// custom input
+.c-input {
+  border: none;
+  border-radius: var.$app-secondary-radius;
+  background-color: var.$c-input-bg;
+  padding: var.$app-xs var.$app-sm;
+  min-width: 270px;
+  max-width: 100%;
+  font-size: var.$app-font-sm;
+  min-height: 45px;
+  width: 100%;
+
+  &::placeholder,
+  .css-14el2xx-placeholder {
+    color: var.$c-input-placeholder;
+    font-size: var.$app-font-sm;
+    font-weight: 300;
+  }
+}
+
+// grid
+.grid {
+  margin: 0;
+  padding: 0;
+
+  .grid-item {
+    float: left;
+    width: 100%;
+    min-height: 1px;
+
+    @include mixins.mq("md") {
+      width: 50%;
+    }
+  }
+}

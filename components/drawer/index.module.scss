@@ -1,7 +1,14 @@
+@use "../../styles/mixins";
+
 .drawer {
   height: 0px;
   overflow: hidden;
-  transition: height ease 0.5s;
+
+  @include mixins.prefix(
+    (
+      transition: height ease 0.5s,
+    )
+  );
 
   .drawer-content {
     padding: 0.5rem;

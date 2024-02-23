@@ -1,4 +1,4 @@
-@import "../../../styles/_variables.scss";
+@use "../../../styles/_variables.scss" as var;
 
 .radio-container {
   input[type="radio"] {
@@ -9,7 +9,7 @@
 
   label {
     display: inline-block;
-    background-color: $c-white;
+    background-color: var.$c-white;
     min-width: 35px;
     width: auto;
     height: 30px;
@@ -22,13 +22,13 @@
     cursor: pointer;
     font-weight: bold;
     margin: 0 4px 12px;
-    font-size: $app-font-xxs;
+    font-size: var.$app-font-xxs;
   }
 
   label:hover,
   input[type="radio"]:focus + label,
   input[type="radio"]:checked + label {
-    background-color: $c-primary-black;
-    color: $c-white;
+    background-color: var.$c-primary-black;
+    color: var.$c-white;
   }
 }

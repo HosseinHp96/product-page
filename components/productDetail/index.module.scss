@@ -1,7 +1,7 @@
-@import "../../styles/mixins";
+@use "../../styles/mixins";
 
 .pd-container {
-  @include mq("md") {
+  @include mixins.mq("md") {
     > h1,
     div {
       text-align: left;

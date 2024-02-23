@@ -1,4 +1,4 @@
-@import "./variables";
+@use "variables" as var;
 
 @mixin prefix($declarations) {
   @each $property, $value in $declarations {
@@ -12,8 +12,8 @@
 
 // breakpoints
 @mixin mq($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
+  @if map_has_key(var.$breakpoints, $width) {
+    $width: map_get(var.$breakpoints, $width);
     @if $type == max {
       $width: $width - 1px;
     }
