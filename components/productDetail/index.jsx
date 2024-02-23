@@ -1,3 +1,5 @@
+"use client";
+
 import Color from "./color";
 import Size from "./size";
 import styles from "./index.module.scss";
@@ -5,6 +7,14 @@ import Description from "./description";
 import StarRating from "../starRating";
 
 const ProductDetail = ({ data }) => {
+  const test = (formData) => {
+    console.log("fire");
+
+    for (var pair of formData.entries()) {
+      console.log(pair[0] + ", " + pair[1]);
+    }
+  };
+
   return (
     <section>
       <div
@@ -22,11 +32,15 @@ const ProductDetail = ({ data }) => {
           <StarRating constantRate={data.rating} starSize={"1.5rem"} />
         </div>
 
-        <Size data={data.sizes} />
+        <form action={test}>
+          <Size data={data.sizes} />
 
-        <Color data={data.colors} />
+          <Color data={data.colors} />
 
-        <button className="btn primary__btn marY-lg">ADD TO BAG</button>
+          <button type="submit" className="btn primary__btn marY-lg">
+            ADD TO BAG
+          </button>
+        </form>
 
         <Description data={data.description} />
       </div>

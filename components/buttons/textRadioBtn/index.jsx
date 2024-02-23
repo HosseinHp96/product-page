@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 
 const TextRadioBtn = (props) => {
-  const { id, name, value, checked, onClick } = props;
+  const { id, name, value, defaultValue } = props;
 
   return (
     <div className={styles["radio-container"]}>
@@ -10,10 +10,9 @@ const TextRadioBtn = (props) => {
         id={id}
         name={name}
         value={value}
-        checked={checked || false}
-        onClick={onClick}
+        defaultChecked={defaultValue === value}
       />
-      <label for={id}>{name}</label>
+      <label htmlFor={id}>{value}</label>
     </div>
   );
 };

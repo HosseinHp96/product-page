@@ -5,11 +5,17 @@ const Size = ({ data }) => {
     <div className="flex flex-column align-i-center marB-xs">
       <h5 className="marB-xs">SIZE</h5>
 
-      <form className="flex flex-wrap jcc">
-        {data.map((size, id) => (
-          <TextRadioBtn name={size} key={id} />
+      <div className="flex flex-wrap jcc">
+        {data.map((size, index) => (
+          <TextRadioBtn
+            value={size}
+            id={index}
+            defaultValue={data[0]}
+            key={index}
+            name="size"
+          />
         ))}
-      </form>
+      </div>
     </div>
   );
 };

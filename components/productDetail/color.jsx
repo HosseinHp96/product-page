@@ -6,11 +6,16 @@ const Color = ({ data }) => {
       <h5 className="marB-xs">COLOR</h5>
 
       <ul className="flex">
-        <form style={{ gap: "10px 15px" }} className="flex flex-wrap jcc">
-          {data.map((color, id) => (
-            <ColorRadioBtn value={color} key={id} />
+        <div style={{ gap: "10px 15px" }} className="flex flex-wrap jcc">
+          {data.map((color, index) => (
+            <ColorRadioBtn
+              value={color}
+              defaultValue={data[0]}
+              key={index}
+              name="color"
+            />
           ))}
-        </form>
+        </div>
       </ul>
     </div>
   );

@@ -26,7 +26,8 @@
   }
 
   label:hover,
-  input[type="radio"]:focus + label {
+  input[type="radio"]:focus + label,
+  input[type="radio"]:checked + label {
     background-color: $c-primary-black;
     color: $c-white;
   }
